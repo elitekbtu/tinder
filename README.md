@@ -72,7 +72,6 @@
     ```bash
    docker-compose run artisan migrate --seed
     docker-compose run artisan key:generate
-    
     ```
 
 6. **Соберите фронтенд**:
@@ -125,14 +124,12 @@ meme-swipe/
 ## 🎨 Скриншоты
 
 <div align="center">
-  <img src="https://drive.google.com/uc?id=1L7Lc0ztBQY6lRqrf_wARkQIEsE6L6D_J" width="30%" alt="Главный экран" />
-  <img src="https://drive.google.com/uc?id=1L7Lc0ztBQY6lRqrf_wARkQIEsE6L6D_J" width="30%" alt="Свайп мемов" />
-  <img src="https://drive.google.com/uc?id=1L7Lc0ztBQY6lRqrf_wARkQIEsE6L6D_J" width="30%" alt="Статистика" />
+  <img src="https://drive.google.com/file/d/1QvjccoDHLunGZ3TWGdc3_Nwy4LuITBeE/view?usp=sharing" width="30%" alt="Главный экран" />
+  <img src="https://drive.google.com/file/d/1RAtgMpPeXPX3gCkMJ9gBr8fdZ499HFNF/view?usp=sharing" width="30%" alt="Свайп мемов" />
+  <img src="https://drive.google.com/file/d/1u8VHVbKpQvNgS_uaiyOZ1m3PnLzdBA3y/view?usp=sharing" width="30%" alt="Статистика" />
 </div>
 
----
+## 🎨 Видео-обзор функционала
 
-## 🎥 Видео-обзор функционала 
-
-- [Первое видео](https://www.loom.com/share/96b7191542a34809af41022b87de905f?sid=ad82eae5-0b7e-4120-af85-91e7f33b47a6)  
-- [Второе видео](https://www.loom.com/share/ddc8709e34904fd7a1063f251b43da1b?sid=6d395a2f-92fb-4ebf-b34f-b7e56db3d951)
+[Первое видео](https://www.loom.com/share/96b7191542a34809af41022b87de905f?sid=ad82eae5-0b7e-4120-af85-91e7f33b47a6)  
+[Второе видео](https://www.loom.com/share/ddc8709e34904fd7a1063f251b43da1b?sid=6d395a2f-92fb-4ebf-b34f-b7e56db3d951)
