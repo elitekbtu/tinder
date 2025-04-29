@@ -2,7 +2,6 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16">
             <div class="flex">
-                <!-- Logo -->
                 <div class="flex-shrink-0 flex items-center">
                     <a href="{{ route('dashboard') }}">
                         <x-application-logo class="block h-8 w-auto fill-current text-red-500" />
@@ -11,8 +10,13 @@
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-6 sm:-my-px sm:ml-8 sm:flex">
-                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')" class="hover:text-red-500">
-                        {{ __('Главная') }}
+                    <x-nav-link :href="route('stats.index')" :active="request()->routeIs('stats.index')" class="hover:text-red-500">
+                        <div class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V16a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-5.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+                            </svg>
+                            {{ __('Главная') }}
+                        </div>
                     </x-nav-link>
                     <x-nav-link :href="route('swipe.index')" :active="request()->routeIs('swipe.index')" class="hover:text-red-500">
                         <div class="flex items-center">
@@ -23,7 +27,12 @@
                         </div>
                     </x-nav-link>
                     <x-nav-link :href="route('memes.index')" :active="request()->routeIs('memes.index')" class="hover:text-red-500">
-                        {{ __('Мои мемы') }}
+                        <div class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" viewBox="0 0 24 24" fill="currentColor">
+                                <path fill-rule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h16a2 2 0 002-2V5a2 2 0 00-2-2H4zm16 12H4l4-8 3 6 2-4 3 6 3-6 2 4 3-6 4 8z" clip-rule="evenodd" />
+                            </svg>
+                            {{ __('Мои мемы') }}
+                        </div>
                     </x-nav-link>
                     <x-nav-link :href="route('favorites.index')" :active="request()->routeIs('favorites.index')" class="hover:text-red-500">
                         <div class="flex items-center">
@@ -93,8 +102,13 @@
     <!-- Responsive Navigation Menu -->
     <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden bg-white shadow-lg">
         <div class="pt-2 pb-3 space-y-1">
-            <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')" class="hover:bg-red-50 hover:text-red-600">
-                {{ __('Главная') }}
+            <x-responsive-nav-link :href="route('stats.index')" :active="request()->routeIs('stats.index')" class="hover:bg-red-50 hover:text-red-600">
+                <div class="flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V16a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-5.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+                    </svg>
+                    {{ __('Главная') }}
+                </div>
             </x-responsive-nav-link>
             <x-responsive-nav-link :href="route('swipe.index')" :active="request()->routeIs('swipe.index')" class="hover:bg-red-50 hover:text-red-600">
                 <div class="flex items-center">
@@ -105,7 +119,12 @@
                 </div>
             </x-responsive-nav-link>
             <x-responsive-nav-link :href="route('memes.index')" :active="request()->routeIs('memes.index')" class="hover:bg-red-50 hover:text-red-600">
-                {{ __('Мои мемы') }}
+                <div class="flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 24 24" fill="currentColor">
+                        <path fill-rule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h16a2 2 0 002-2V5a2 2 0 00-2-2H4zm16 12H4l4-8 3 6 2-4 3 6 3-6 2 4 3-6 4 8z" clip-rule="evenodd" />
+                    </svg>
+                    {{ __('Мои мемы') }}
+                </div>
             </x-responsive-nav-link>
             <x-responsive-nav-link :href="route('favorites.index')" :active="request()->routeIs('favorites.index')" class="hover:bg-red-50 hover:text-red-600">
                 <div class="flex items-center">
