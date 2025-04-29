@@ -70,6 +70,7 @@
 
 5. **Выполните миграции и сидеры**:
     ```bash
+    docker-compose run artisan key:generate
     docker-compose run artisan migrate --seed
     ```
 
