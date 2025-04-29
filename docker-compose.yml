@@ -1,20 +1,20 @@
 services:
-#    nginx:
-#        image: "nginx:stable-alpine"
-#        ports:
-#            - "8000:80"
-#        volumes:
-#            - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf:ro
-#            - ./src:/var/www/tinder
-#        depends_on:
-#            - mysql
-#            - php
-#    php:
-#        build:
-#            context: dockerfiles
-#            dockerfile: php.Dockerfile
-#        volumes:
-#            - ./src:/var/www/tinder
+    nginx:
+        image: "nginx:stable-alpine"
+        ports:
+            - "8000:80"
+        volumes:
+            - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf:ro
+            - ./src:/var/www/tinder
+        depends_on:
+            - mysql
+            - php
+    php:
+        build:
+            context: dockerfiles
+            dockerfile: php.Dockerfile
+        volumes:
+            - ./src:/var/www/tinder
     mysql:
         image: mysql:8.0
         ports:
@@ -23,16 +23,16 @@ services:
             - env/mysql.env
         volumes:
             - ./src:/var/www/tinder
-#    composer:
-#        build:
-#            context: dockerfiles
-#            dockerfile: composer.Dockerfile
-#        volumes:
-#            - ./src:/var/www/tinder
-#    artisan:
-#        build:
-#            context: dockerfiles
-#            dockerfile: php.Dockerfile
-#        volumes:
-#            - ./src:/var/www/tinder
-#        entrypoint: ["php", "/var/www/tinder/artisan"]
+    composer:
+        build:
+            context: dockerfiles
+            dockerfile: composer.Dockerfile
+        volumes:
+            - ./src:/var/www/tinder
+    artisan:
+        build:
+            context: dockerfiles
+            dockerfile: php.Dockerfile
+        volumes:
+            - ./src:/var/www/tinder
+        entrypoint: ["php", "/var/www/tinder/artisan"]

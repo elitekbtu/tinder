@@ -70,9 +70,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="bg-white rounded-2xl shadow-md p-6 mb-8 border border-gray-100">
+
+                    <div id="activityCard" class="bg-white rounded-2xl shadow-md p-6 mb-8 border border-gray-100">
                         <h2 class="text-lg font-semibold mb-4">Активность за сегодня</h2>
-                        <div class="h-48 max-h-48">
+                        <div id="activityChartWrapper" class="h-48 max-h-48">
                             <canvas id="activityChart" class="h-full w-full"></canvas>
                         </div>
                     </div>
@@ -115,81 +116,71 @@
     @push('scripts')
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         <script>
-            document.addEventListener('DOMContentLoaded', function() {
+            document.addEventListener('DOMContentLoaded', function () {
                 const activityData = @json($activityData);
-                const chartElement = document.getElementById('activityChart');
+                const canvas = document.getElementById('activityChart');
+                const wrapper = document.getElementById('activityChartWrapper');
 
-                if (!chartElement) {
-                    console.error('Chart element not found');
+                if (!canvas) {
+                    console.error('Canvas element for chart not found');
+                    wrapper.innerHTML = '<p class="text-center text-gray-500 py-8">Ошибка: элемент для графика не найден.</p>';
                     return;
                 }
 
-                if (typeof chartElement.getContext !== 'function') {
-                    console.error('Chart element is not a canvas element.');
-                    chartElement.parentElement.innerHTML = '<h2 class="text-lg font-semibold mb-4">Активность за сегодня</h2><p class="text-center text-gray-500 py-8">Ошибка: элемент для графика не является canvas.</p>';
-                    return;
-                }
-
-                if (!activityData || !activityData.hours || !activityData.likes || !activityData.dislikes || (activityData.likes.every(v => v === 0) && activityData.dislikes.every(v => v === 0))) {
-                    chartElement.parentElement.innerHTML = '<h2 class="text-lg font-semibold mb-4">Активность за сегодня</h2><p class="text-center text-gray-500 py-8">Нет данных активности за сегодня.</p>';
+                if (!activityData || !activityData.hours || !activityData.likes || !activityData.dislikes ||
+                    (activityData.likes.every(v => v === 0) && activityData.dislikes.every(v => v === 0))) {
+                    wrapper.innerHTML = '<p class="text-center text-gray-500 py-8">Нет данных активности за сегодня.</p>';
                     return;
                 }
 
                 try {
-                    const ctx = chartElement.getContext('2d');
+                    const ctx = canvas.getContext('2d');
                     new Chart(ctx, {
                         type: 'line',
                         data: {
                             labels: activityData.hours,
-                            datasets: [{
-                                label: 'Лайки',
-                                data: activityData.likes,
-                                backgroundColor: 'rgba(16, 185, 129, 0.2)',
-                                borderColor: 'rgba(16, 185, 129, 1)',
-                                borderWidth: 2,
-                                tension: 0.1,
-                                fill: true
-                            }, {
-                                label: 'Дизлайки',
-                                data: activityData.dislikes,
-                                backgroundColor: 'rgba(239, 68, 68, 0.2)',
-                                borderColor: 'rgba(239, 68, 68, 1)',
-                                borderWidth: 2,
-                                tension: 0.1,
-                                fill: true
-                            }]
+                            datasets: [
+                                {
+                                    label: 'Лайки',
+                                    data: activityData.likes,
+                                    backgroundColor: 'rgba(16, 185, 129, 0.2)',
+                                    borderColor: 'rgba(16, 185, 129, 1)',
+                                    borderWidth: 2,
+                                    tension: 0.1,
+                                    fill: true,
+                                },
+                                {
+                                    label: 'Дизлайки',
+                                    data: activityData.dislikes,
+                                    backgroundColor: 'rgba(239, 68, 68, 0.2)',
+                                    borderColor: 'rgba(239, 68, 68, 1)',
+                                    borderWidth: 2,
+                                    tension: 0.1,
+                                    fill: true,
+                                },
+                            ],
                         },
                         options: {
                             responsive: true,
                             maintainAspectRatio: false,
                             plugins: {
-                                legend: {
-                                    position: 'top',
-                                },
-                                tooltip: {
-                                    mode: 'index',
-                                    intersect: false
-                                }
+                                legend: { position: 'top' },
+                                tooltip: { mode: 'index', intersect: false },
                             },
                             scales: {
                                 y: {
                                     beginAtZero: true,
-                                    ticks: {
-                                        precision: 0
-                                    }
+                                    ticks: { precision: 0 },
                                 },
                                 x: {
-                                    ticks: {
-                                        maxRotation: 45,
-                                        minRotation: 45
-                                    }
-                                }
-                            }
-                        }
+                                    ticks: { maxRotation: 45, minRotation: 45 },
+                                },
+                            },
+                        },
                     });
                 } catch (error) {
                     console.error('Chart initialization error:', error);
-                    chartElement.parentElement.innerHTML = '<h2 class="text-lg font-semibold mb-4">Активность за сегодня</h2><p class="text-center text-gray-500 py-8">Ошибка при отображении графика.</p>';
+                    wrapper.innerHTML = '<p class="text-center text-gray-500 py-8">Ошибка при отображении графика.</p>';
                 }
             });
         </script>
