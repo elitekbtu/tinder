@@ -155,3 +155,23 @@ meme-swipe/
 - **MySQL**: Надёжность и производительность для работы с рекомендациями.
 - **Docker**: Упрощённая разработка и деплой благодаря контейнеризации.
 - **Alpine.js**: Минималистичный, но мощный инструмент для интерактивности.
+
+
+## 🎨 Скриншоты
+
+<div align="center">
+  <a href="https://drive.google.com/file/d/1QvjccoDHLunGZ3TWGdc3_Nwy4LuITBeE/view?usp=sharing" target="_blank">
+    <img src="https://drive.google.com/thumbnail?id=1QvjccoDHLunGZ3TWGdc3_Nwy4LuITBeE&sz=w400" width="30%" alt="Главный экран" />
+  </a>
+  <a href="https://drive.google.com/file/d/1RAtgMpPeXPX3gCkMJ9gBr8fdZ499HFNF/view?usp=sharing" target="_blank">
+    <img src="https://drive.google.com/thumbnail?id=1RAtgMpPeXPX3gCkMJ9gBr8fdZ499HFNF&sz=w400" width="30%" height="50%" alt="Свайп мемов" />
+  </a>
+  <a href="https://drive.google.com/file/d/1u8VHVbKpQvNgS_uaiyOZ1m3PnLzdBA3y/view?usp=sharing" target="_blank">
+    <img src="https://drive.google.com/thumbnail?id=1u8VHVbKpQvNgS_uaiyOZ1m3PnLzdBA3y&sz=w400" width="30%" alt="Статистика" />
+  </a>
+</div>
+
+## 🎨 Видео-обзор функционала
+
+[Первое видео](https://www.loom.com/share/96b7191542a34809af41022b87de905f?sid=ad82eae5-0b7e-4120-af85-91e7f33b47a6)  
+[Второе видео](https://www.loom.com/share/ddc8709e34904fd7a1063f251b43da1b?sid=6d395a2f-92fb-4ebf-b34f-b7e56db3d951)
