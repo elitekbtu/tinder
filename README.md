@@ -124,10 +124,18 @@ meme-swipe/
 ## 🎨 Скриншоты
 
 <div align="center">
-  <img src="https://drive.google.com/file/d/1QvjccoDHLunGZ3TWGdc3_Nwy4LuITBeE/view?usp=sharing" width="30%" alt="Главный экран" />
-  <img src="https://drive.google.com/file/d/1RAtgMpPeXPX3gCkMJ9gBr8fdZ499HFNF/view?usp=sharing" width="30%" alt="Свайп мемов" />
-  <img src="https://drive.google.com/file/d/1u8VHVbKpQvNgS_uaiyOZ1m3PnLzdBA3y/view?usp=sharing" width="30%" alt="Статистика" />
+  <a href="https://drive.google.com/file/d/1QvjccoDHLunGZ3TWGdc3_Nwy4LuITBeE/view?usp=sharing" target="_blank">
+    <img src="https://drive.google.com/thumbnail?id=1QvjccoDHLunGZ3TWGdc3_Nwy4LuITBeE&sz=w400" width="30%" alt="Главный экран" />
+  </a>
+  <a href="https://drive.google.com/file/d/1RAtgMpPeXPX3gCkMJ9gBr8fdZ499HFNF/view?usp=sharing" target="_blank">
+    <img src="https://drive.google.com/thumbnail?id=1RAtgMpPeXPX3gCkMJ9gBr8fdZ499HFNF&sz=w400" width="30%" height="50%" alt="Свайп мемов" />
+  </a>
+  <a href="https://drive.google.com/file/d/1u8VHVbKpQvNgS_uaiyOZ1m3PnLzdBA3y/view?usp=sharing" target="_blank">
+    <img src="https://drive.google.com/thumbnail?id=1u8VHVbKpQvNgS_uaiyOZ1m3PnLzdBA3y&sz=w400" width="30%" alt="Статистика" />
+  </a>
 </div>
+
+---
 
 ## 🎨 Видео-обзор функционала
 
