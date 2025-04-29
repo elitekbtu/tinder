@@ -121,18 +121,14 @@ meme-swipe/
 
 ## 🎨 Скриншоты
 
-<div align="center">
-  <img src="https://drive.google.com/drive/folders/1L7Lc0ztBQY6lRqrf_wARkQIEsE6L6D_J" width="30%" alt="Главный экран" />
-  <img src="https://drive.google.com/drive/folders/1L7Lc0ztBQY6lRqrf_wARkQIEsE6L6D_J" width="30%" alt="Свайп мемов" />
-  <img src="https://drive.google.com/drive/folders/1L7Lc0ztBQY6lRqrf_wARkQIEsE6L6D_J" width="30%" alt="Статистика" />
-</div>
+<img src="https://drive.google.com/drive/folders/1L7Lc0ztBQY6lRqrf_wARkQIEsE6L6D_J" width="30%" alt="Главный экран" />
+<img src="https://drive.google.com/drive/folders/1L7Lc0ztBQY6lRqrf_wARkQIEsE6L6D_J" width="30%" alt="Свайп мемов" />
+<img src="https://drive.google.com/drive/folders/1L7Lc0ztBQY6lRqrf_wARkQIEsE6L6D_J" width="30%" alt="Статистика" />
 
 
 ## 🎨 Видео-обзор функционала 
 
-<div align="center">
-  [Первое видео](https://www.loom.com/share/96b7191542a34809af41022b87de905f?sid=ad82eae5-0b7e-4120-af85-91e7f33b47a6)  
-  [Второе видео](https://www.loom.com/share/ddc8709e34904fd7a1063f251b43da1b?sid=6d395a2f-92fb-4ebf-b34f-b7e56db3d951)
-</div>
+[Первое видео](https://www.loom.com/share/96b7191542a34809af41022b87de905f?sid=ad82eae5-0b7e-4120-af85-91e7f33b47a6)  
+[Второе видео](https://www.loom.com/share/ddc8709e34904fd7a1063f251b43da1b?sid=6d395a2f-92fb-4ebf-b34f-b7e56db3d951)
 
 
