@@ -9,7 +9,7 @@
                     @csrf
                     @method('DELETE')
                     <button type="submit" onclick="return confirm('Вы уверены, что хотите очистить всю историю?')"
-                            class="inline-flex items-center px-4 py-2 bg-red-600 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-red-700 active:bg-red-900 focus:outline-none focus:border-red-900 focus:ring ring-red-300 disabled:opacity-25 transition ease-in-out duration-150">
+                            class="inline-flex items-center px-4 py-2 bg-red-600 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-red-700 active:bg-red-800 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 transition ease-in-out duration-150">
                         Очистить историю
                     </button>
                 </form>
@@ -21,23 +21,21 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900">
-                    <!-- Statistics -->
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
-                        <div class="bg-blue-50 p-4 rounded-lg">
+                        <div class="bg-white border border-gray-200 p-4 rounded-lg shadow-sm">
                             <p class="text-sm text-gray-500">Всего свайпов</p>
                             <p class="text-2xl font-semibold">{{ $swipes->total() }}</p>
                         </div>
-                        <div class="bg-green-50 p-4 rounded-lg">
+                        <div class="bg-white border border-gray-200 p-4 rounded-lg shadow-sm">
                             <p class="text-sm text-gray-500">Лайков</p>
                             <p class="text-2xl font-semibold text-green-600">{{ $totalLikes }}</p>
                         </div>
-                        <div class="bg-red-50 p-4 rounded-lg">
+                        <div class="bg-white border border-gray-200 p-4 rounded-lg shadow-sm">
                             <p class="text-sm text-gray-500">Дизлайков</p>
                             <p class="text-2xl font-semibold text-red-600">{{ $totalDislikes }}</p>
                         </div>
                     </div>
 
-                    <!-- Swipe History -->
                     <div class="space-y-4">
                         @forelse($swipes as $swipe)
                             <div class="border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow">
@@ -69,7 +67,8 @@
                                 <h3 class="mt-2 text-lg font-medium text-gray-900">История свайпов пуста</h3>
                                 <p class="mt-1 text-gray-500">Начните свайпать мемы, чтобы увидеть их здесь</p>
                                 <div class="mt-6">
-                                    <a href="{{ route('swipe.index') }}" class="inline-flex items-center px-4 py-2 bg-blue-600 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-blue-700 active:bg-blue-900 focus:outline-none focus:border-blue-900 focus:ring ring-blue-300 disabled:opacity-25 transition ease-in-out duration-150">
+                                    <a href="{{ route('swipe.index') }}"
+                                       class="inline-flex items-center px-4 py-2 bg-red-600 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-red-700 active:bg-red-800 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 transition ease-in-out duration-150">
                                         Начать свайпить
                                     </a>
                                 </div>
@@ -77,7 +76,6 @@
                         @endforelse
                     </div>
 
-                    <!-- Pagination -->
                     @if($swipes->hasPages())
                         <div class="mt-6">
                             {{ $swipes->links() }}
@@ -87,4 +85,22 @@
             </div>
         </div>
     </div>
+
+    <style>
+        .bg-red-600 {
+            background-color: #FF5864;
+        }
+        .hover\:bg-red-700:hover {
+            background-color: #FF4757;
+        }
+        .active\:bg-red-800:active {
+            background-color: #E8414D;
+        }
+        .focus\:ring-red-500:focus {
+            --tw-ring-color: rgba(255, 88, 100, 0.5);
+        }
+        .text-red-600 {
+            color: #FF5864;
+        }
+    </style>
 </x-app-layout>

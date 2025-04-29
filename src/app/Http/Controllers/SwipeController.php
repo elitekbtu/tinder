@@ -17,10 +17,8 @@ class SwipeController extends Controller
      */
     public function index(): View
     {
-        // Get IDs of memes the user has already swiped on
         $swipedMemeIds = Swipe::where('user_id', Auth::id())->pluck('meme_id');
 
-        // Get a random meme the user hasn't seen yet
         $meme = Meme::whereNotIn('id', $swipedMemeIds)
             ->inRandomOrder()
             ->first();
@@ -29,7 +27,6 @@ class SwipeController extends Controller
             return view('swipe.no-memes');
         }
 
-        // Get swipe statistics
         $totalSwipes = Swipe::where('user_id', Auth::id())->count();
         $totalLikes = Swipe::where('user_id', Auth::id())
             ->where('action', 'like')
@@ -42,16 +39,12 @@ class SwipeController extends Controller
         ]);
     }
 
-    /**
-     * Handle a swipe action (like/dislike).
-     */
     public function store(Request $request, Meme $meme): RedirectResponse
     {
         $validated = $request->validate([
             'action' => 'required|in:like,dislike'
         ]);
 
-        // Check if user already swiped this meme
         $existingSwipe = Swipe::where('user_id', Auth::id())
             ->where('meme_id', $meme->id)
             ->first();
@@ -60,21 +53,18 @@ class SwipeController extends Controller
             return back()->with('error', 'Вы уже реагировали на этот мем ранее');
         }
 
-        // Record the swipe action
         Swipe::create([
             'user_id' => Auth::id(),
             'meme_id' => $meme->id,
             'action' => $validated['action']
         ]);
 
-        // If like, add to favorites
         if ($validated['action'] === 'like') {
             Favorite::firstOrCreate([
                 'user_id' => Auth::id(),
                 'meme_id' => $meme->id
             ]);
 
-            // Check if we should show matches
             $likeCount = Favorite::where('user_id', Auth::id())->count();
             if ($likeCount >= 10) {
                 return redirect()->route('matches.check')
@@ -86,9 +76,6 @@ class SwipeController extends Controller
             ->with('status', $validated['action'] === 'like' ? 'Мем добавлен в избранное!' : 'Мем пропущен');
     }
 
-    /**
-     * Get swipe history for the authenticated user.
-     */
     public function history(): View
     {
         $swipes = Swipe::with('meme')

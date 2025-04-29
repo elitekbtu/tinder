@@ -13,11 +13,11 @@ return new class extends Migration
     {
         Schema::create('memes', function (Blueprint $table) {
             $table->id();
-            $table->string('image_url');       // Ссылка на изображение
-            $table->string('title')->nullable(); // Название мема
-            $table->text('description')->nullable(); // Описание (для AI-анализа)
-            $table->string('category')->nullable(); // Категория (например, "Коты", "Программисты")
-            $table->foreignId('user_id')->nullable()->constrained(); // Автор мема (если есть)
+            $table->string('image_url');
+            $table->string('title')->nullable();
+            $table->text('description')->nullable();
+            $table->string('category')->nullable();
+            $table->foreignId('user_id')->nullable()->constrained()->onDelete('cascade');;
             $table->timestamps();
         });
     }

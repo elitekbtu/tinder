@@ -12,7 +12,6 @@
                     <form action="{{ route('memes.store') }}" method="POST" enctype="multipart/form-data" class="space-y-6">
                         @csrf
 
-                        <!-- Title Field -->
                         <div>
                             <x-input-label for="title" :value="__('Название')" />
                             <x-text-input
@@ -27,7 +26,6 @@
                             <x-input-error :messages="$errors->get('title')" class="mt-2" />
                         </div>
 
-                        <!-- Description Field -->
                         <div>
                             <x-input-label for="description" :value="__('Описание')" />
                             <textarea
@@ -40,7 +38,6 @@
                             <x-input-error :messages="$errors->get('description')" class="mt-2" />
                         </div>
 
-                        <!-- Category Field with Select -->
                         <div>
                             <x-input-label for="category" :value="__('Категория')" />
                             <select
@@ -59,7 +56,6 @@
                             <x-input-error :messages="$errors->get('category')" class="mt-2" />
                         </div>
 
-                        <!-- Image Upload Field -->
                         <div>
                             <x-input-label for="image" :value="__('Изображение')" />
                             <div class="mt-1 flex items-center">
@@ -85,7 +81,6 @@
                             <x-input-error :messages="$errors->get('image')" class="mt-2" />
                         </div>
 
-                        <!-- Form Actions -->
                         <div class="flex items-center justify-end space-x-4">
                             <x-secondary-button onclick="window.location='{{ route('memes.index') }}'">
                                 {{ __('Отмена') }}

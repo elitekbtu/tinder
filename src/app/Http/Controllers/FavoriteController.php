@@ -7,7 +7,6 @@ use Illuminate\Support\Facades\Auth;
 
 class FavoriteController extends Controller
 {
-    // Показать все избранные мемы пользователя
     public function index()
     {
         $favorites = Favorite::with('meme')
@@ -17,7 +16,6 @@ class FavoriteController extends Controller
         return view('favorites.index', ['favorites' => $favorites]);
     }
 
-    // Удалить мем из избранного
     public function destroy($id)
     {
         $favorite = Favorite::where('user_id', Auth::id())

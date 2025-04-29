@@ -13,11 +13,11 @@ return new class extends Migration
     {
         Schema::create('swipes', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->constrained(); // Кто свайпнул
-            $table->foreignId('meme_id')->constrained(); // Какой мем
-            $table->enum('action', ['like', 'dislike']); // Тип действия
+            $table->foreignId('user_id')->constrained();
+            $table->foreignId('meme_id')->constrained();
+            $table->enum('action', ['like', 'dislike']);
             $table->timestamps();
-            $table->unique(['user_id', 'meme_id']); // Чтобы нельзя было дважды свайпнуть один мем
+            $table->unique(['user_id', 'meme_id']);
         });
     }
 

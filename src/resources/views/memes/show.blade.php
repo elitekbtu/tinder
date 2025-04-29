@@ -15,7 +15,7 @@
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900">
                     <div class="max-w-3xl mx-auto space-y-6">
-                        <!-- Meme Image with Lightbox -->
+
                         <div class="relative group">
                             <img src="{{ $meme->image_url }}" alt="{{ $meme->title }}"
                                  class="w-full rounded-lg shadow-md cursor-zoom-in hover:shadow-lg transition-shadow duration-300"
@@ -27,7 +27,6 @@
                             </div>
                         </div>
 
-                        <!-- Meme Details -->
                         <div class="space-y-4">
                             <div class="flex justify-between items-start">
                                 <div>
@@ -42,7 +41,6 @@
                                     </div>
                                 </div>
 
-                                <!-- Like Button -->
                                 <button onclick="toggleLike({{ $meme->id }})"
                                         class="flex items-center space-x-1 text-gray-500 hover:text-red-500 transition-colors">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -60,7 +58,6 @@
                             @endif
                         </div>
 
-                        <!-- Action Buttons -->
                         <div class="flex justify-between items-center pt-4 border-t border-gray-200">
                             <div class="flex space-x-3">
                                 <form action="{{ route('memes.destroy', $meme) }}" method="POST" onsubmit="return confirm('Вы уверены что хотите удалить этот мем?')">
@@ -83,7 +80,6 @@
         </div>
     </div>
 
-    <!-- Lightbox Modal -->
     <div id="lightbox" class="fixed inset-0 bg-black bg-opacity-90 z-50 hidden items-center justify-center p-4">
         <div class="relative max-w-6xl max-h-screen">
             <button onclick="closeLightbox()" class="absolute -top-12 right-0 text-white hover:text-gray-300">
@@ -96,7 +92,6 @@
     </div>
 
     <script>
-        // Lightbox functionality
         function openLightbox(img) {
             const lightbox = document.getElementById('lightbox');
             const lightboxImg = document.getElementById('lightbox-image');
@@ -111,7 +106,6 @@
             document.body.style.overflow = 'auto';
         }
 
-        // Like functionality (example - would need backend implementation)
         async function toggleLike(memeId) {
             try {
                 const response = await fetch(`/memes/${memeId}/like`, {

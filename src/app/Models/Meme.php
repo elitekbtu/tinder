@@ -19,7 +19,6 @@ class Meme extends Model
         return $this->hasMany(Swipe::class);
     }
 
-    // Кто добавил в избранное
     public function favoritedBy(): HasMany
     {
         return $this->hasMany(Favorite::class);

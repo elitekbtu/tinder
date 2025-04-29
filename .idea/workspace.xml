@@ -5,14 +5,39 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bd6569b9-d85e-4ac2-be84-10932828271f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3f6ee53f-cb30-4de5-809a-7da4bb9067c0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3f6ee53f-cb30-4de5-809a-7da4bb9067c0/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3f6ee53f-cb30-4de5-809a-7da4bb9067c0/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3f6ee53f-cb30-4de5-809a-7da4bb9067c0/storage_v2/_src_/schema/tmdb.t2A2AA.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/components/application-logo.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/components/application-logo.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/src/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/Http/Controllers/FavoriteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Http/Controllers/FavoriteController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/Http/Controllers/MatchController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Http/Controllers/MatchController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/Http/Controllers/ProfileController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Http/Controllers/ProfileController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/Http/Controllers/StatsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Http/Controllers/StatsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/Http/Controllers/SwipeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Http/Controllers/SwipeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/Models/Meme.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Models/Meme.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/factories/UserFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/factories/UserFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/migrations/2025_04_28_171601_create_memes_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/migrations/2025_04_28_171601_create_memes_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/migrations/2025_04_28_171602_create_swipes_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/migrations/2025_04_28_171602_create_swipes_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/migrations/2025_04_28_171834_create_matches_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/migrations/2025_04_28_171834_create_matches_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/seeders/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/views/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/dashboard.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/views/layouts/guest.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/layouts/guest.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/resources/views/layouts/navigation.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/layouts/navigation.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/views/matches/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/matches/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/views/memes/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/memes/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/views/memes/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/memes/show.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/resources/views/stats/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/stats/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/views/swipe/history.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/swipe/history.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/resources/views/swipe/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/swipe/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/resources/views/swipe/no-memes.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/swipe/no-memes.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/welcome.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/storage/app/public/memes/W9HiFPLjpDiU6ZZqlGNyl3hCLQjF8PaDcfzECIRI.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/storage/app/public/memes/rBnIIhDAZhx0ZyETikZQcdQQTLjVb9lTWDP7YPOx.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -206,7 +231,8 @@
       <workItem from="1745858596160" duration="2375000" />
       <workItem from="1745861001695" duration="4547000" />
       <workItem from="1745898905333" duration="9718000" />
-      <workItem from="1745908939940" duration="8678000" />
+      <workItem from="1745908939940" duration="10009000" />
+      <workItem from="1745926511470" duration="10181000" />
     </task>
     <servers />
   </component>

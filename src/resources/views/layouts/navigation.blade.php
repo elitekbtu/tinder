@@ -8,7 +8,6 @@
                     </a>
                 </div>
 
-                <!-- Navigation Links -->
                 <div class="hidden space-x-6 sm:-my-px sm:ml-8 sm:flex">
                     <x-nav-link :href="route('stats.index')" :active="request()->routeIs('stats.index')" class="hover:text-red-500">
                         <div class="flex items-center">
@@ -31,7 +30,7 @@
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" viewBox="0 0 24 24" fill="currentColor">
                                 <path fill-rule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h16a2 2 0 002-2V5a2 2 0 00-2-2H4zm16 12H4l4-8 3 6 2-4 3 6 3-6 2 4 3-6 4 8z" clip-rule="evenodd" />
                             </svg>
-                            {{ __('Мои мемы') }}
+                            {{ __('Все мемы') }}
                         </div>
                     </x-nav-link>
                     <x-nav-link :href="route('favorites.index')" :active="request()->routeIs('favorites.index')" class="hover:text-red-500">
@@ -53,7 +52,6 @@
                 </div>
             </div>
 
-            <!-- Settings Dropdown -->
             <div class="hidden sm:flex sm:items-center sm:ml-6">
                 <x-dropdown align="right" width="48">
                     <x-slot name="trigger">
@@ -74,7 +72,6 @@
                         <x-dropdown-link :href="route('profile.edit')" class="hover:bg-red-50 hover:text-red-600">
                             {{ __('Профиль') }}
                         </x-dropdown-link>
-                        <!-- Authentication -->
                         <form method="POST" action="{{ route('logout') }}">
                             @csrf
                             <x-dropdown-link :href="route('logout')" class="hover:bg-red-50 hover:text-red-600"
@@ -87,7 +84,6 @@
                 </x-dropdown>
             </div>
 
-            <!-- Hamburger -->
             <div class="-mr-2 flex items-center sm:hidden">
                 <button @click="open = ! open" class="inline-flex items-center justify-center p-2 rounded-md text-gray-500 hover:text-red-500 hover:bg-gray-100 focus:outline-none transition duration-150 ease-in-out">
                     <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
@@ -99,7 +95,6 @@
         </div>
     </div>
 
-    <!-- Responsive Navigation Menu -->
     <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden bg-white shadow-lg">
         <div class="pt-2 pb-3 space-y-1">
             <x-responsive-nav-link :href="route('stats.index')" :active="request()->routeIs('stats.index')" class="hover:bg-red-50 hover:text-red-600">
@@ -123,7 +118,7 @@
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 24 24" fill="currentColor">
                         <path fill-rule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h16a2 2 0 002-2V5a2 2 0 00-2-2H4zm16 12H4l4-8 3 6 2-4 3 6 3-6 2 4 3-6 4 8z" clip-rule="evenodd" />
                     </svg>
-                    {{ __('Мои мемы') }}
+                    {{ __('Все мемы') }}
                 </div>
             </x-responsive-nav-link>
             <x-responsive-nav-link :href="route('favorites.index')" :active="request()->routeIs('favorites.index')" class="hover:bg-red-50 hover:text-red-600">
@@ -144,7 +139,6 @@
             </x-responsive-nav-link>
         </div>
 
-        <!-- Responsive Settings Options -->
         <div class="pt-4 pb-1 border-t border-gray-200">
             <div class="px-4 flex items-center">
                 <div class="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center text-red-600 font-bold mr-3">
@@ -160,7 +154,6 @@
                 <x-responsive-nav-link :href="route('profile.edit')" class="hover:bg-red-50 hover:text-red-600">
                     {{ __('Профиль') }}
                 </x-responsive-nav-link>
-                <!-- Authentication -->
                 <form method="POST" action="{{ route('logout') }}">
                     @csrf
                     <x-responsive-nav-link :href="route('logout')" class="hover:bg-red-50 hover:text-red-600"

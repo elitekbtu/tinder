@@ -27,7 +27,6 @@
                         </div>
 
                         @if(isset($meme))
-                            <!-- Карточка мема -->
                             <div class="bg-white rounded-2xl shadow-md overflow-hidden mb-8 border border-gray-100 transform transition-transform duration-300 hover:shadow-lg" id="meme-card">
                                 <div class="relative">
                                     <img src="{{ $meme->image_url }}" alt="{{ $meme->title }}"
@@ -42,8 +41,6 @@
                                     <p class="text-gray-600 mb-4">{{ $meme->description }}</p>
                                 </div>
                             </div>
-
-                            <!-- Кнопки действий -->
                             <div class="flex justify-center space-x-10">
                                 <button onclick="handleSwipe('dislike')"
                                         class="p-4 bg-white border-2 border-gray-300 text-gray-500 rounded-full hover:bg-red-50 hover:border-red-100 hover:text-red-500 transition-all shadow-md transform hover:scale-110">
@@ -84,7 +81,6 @@
     @push('scripts')
         <script>
             function handleSwipe(action) {
-                // Добавляем анимацию свайпа
                 const card = document.getElementById('meme-card');
                 if (card) {
                     card.style.transition = 'transform 0.5s ease';
@@ -122,7 +118,6 @@
                     });
             }
 
-            // Mobile swipe handlers
             document.addEventListener('DOMContentLoaded', function() {
                 const memeCard = document.getElementById('meme-card');
                 if (!memeCard) return;

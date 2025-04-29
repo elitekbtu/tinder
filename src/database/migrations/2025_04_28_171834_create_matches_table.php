@@ -13,9 +13,9 @@ return new class extends Migration
     {
         Schema::create('matches', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user1_id')->constrained('users'); // Первый пользователь
-            $table->foreignId('user2_id')->constrained('users'); // Второй пользователь
-            $table->integer('match_score')->default(0); // Процент совпадений
+            $table->foreignId('user1_id')->constrained('users');
+            $table->foreignId('user2_id')->constrained('users');
+            $table->integer('match_score')->default(0);
             $table->timestamps();
         });
     }
