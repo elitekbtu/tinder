@@ -68,10 +68,11 @@
     docker-compose run composer install
     ```
 
-5. **Выполните миграции и сидеры**:
+5. **Выполните миграции и сидеры и сгенерируйте ключ приложения**:
     ```bash
+   docker-compose run artisan migrate --seed
     docker-compose run artisan key:generate
-    docker-compose run artisan migrate --seed
+    
     ```
 
 6. **Соберите фронтенд**:
